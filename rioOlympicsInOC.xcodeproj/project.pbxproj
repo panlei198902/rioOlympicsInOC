@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C2B75A0B1DD9CA8300151B0A /* BaseDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B75A0A1DD9CA8300151B0A /* BaseDAO.m */; };
+		C2B75A0E1DD9CE0A00151B0A /* EventDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B75A0D1DD9CE0A00151B0A /* EventDAO.m */; };
 		C2FC212E1DD8B5C300EB204B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FC212D1DD8B5C300EB204B /* main.m */; };
 		C2FC21311DD8B5C300EB204B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FC21301DD8B5C300EB204B /* AppDelegate.m */; };
 		C2FC21341DD8B5C300EB204B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FC21331DD8B5C300EB204B /* ViewController.m */; };
@@ -41,6 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C2B75A091DD9CA8300151B0A /* BaseDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDAO.h; sourceTree = "<group>"; };
+		C2B75A0A1DD9CA8300151B0A /* BaseDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDAO.m; sourceTree = "<group>"; };
+		C2B75A0C1DD9CE0A00151B0A /* EventDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDAO.h; sourceTree = "<group>"; };
+		C2B75A0D1DD9CE0A00151B0A /* EventDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDAO.m; sourceTree = "<group>"; };
 		C2FC21291DD8B5C300EB204B /* rioOlympicsInOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rioOlympicsInOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2FC212D1DD8B5C300EB204B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C2FC212F1DD8B5C300EB204B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -94,6 +100,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C2936EF01DD9C7EB00324803 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				C2FC21741DD8B9F300EB204B /* DBHelper.h */,
+				C2FC21751DD8B9F300EB204B /* DBHelper.m */,
+				C2B75A091DD9CA8300151B0A /* BaseDAO.h */,
+				C2B75A0A1DD9CA8300151B0A /* BaseDAO.m */,
+				C2B75A0C1DD9CE0A00151B0A /* EventDAO.h */,
+				C2B75A0D1DD9CE0A00151B0A /* EventDAO.m */,
+			);
+			name = DAO;
+			sourceTree = "<group>";
+		};
 		C2FC21201DD8B5C200EB204B = {
 			isa = PBXGroup;
 			children = (
@@ -175,9 +194,8 @@
 		C2FC21641DD8B73E00EB204B /* PersistenceLayer */ = {
 			isa = PBXGroup;
 			children = (
+				C2936EF01DD9C7EB00324803 /* DAO */,
 				C2FC21601DD8B62D00EB204B /* Domain */,
-				C2FC21741DD8B9F300EB204B /* DBHelper.h */,
-				C2FC21751DD8B9F300EB204B /* DBHelper.m */,
 			);
 			path = PersistenceLayer;
 			sourceTree = "<group>";
@@ -347,6 +365,8 @@
 				C2FC216D1DD8B81400EB204B /* Schedule.m in Sources */,
 				C2FC21631DD8B64600EB204B /* Events.m in Sources */,
 				C2FC21341DD8B5C300EB204B /* ViewController.m in Sources */,
+				C2B75A0E1DD9CE0A00151B0A /* EventDAO.m in Sources */,
+				C2B75A0B1DD9CA8300151B0A /* BaseDAO.m in Sources */,
 				C2FC21311DD8B5C300EB204B /* AppDelegate.m in Sources */,
 				C2FC212E1DD8B5C300EB204B /* main.m in Sources */,
 				C2FC21761DD8B9F300EB204B /* DBHelper.m in Sources */,
@@ -587,6 +607,7 @@
 				C2FC21581DD8B5C300EB204B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C2FC21591DD8B5C300EB204B /* Build configuration list for PBXNativeTarget "rioOlympicsInOCTests" */ = {
 			isa = XCConfigurationList;
@@ -595,6 +616,7 @@
 				C2FC215B1DD8B5C300EB204B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C2FC215C1DD8B5C300EB204B /* Build configuration list for PBXNativeTarget "rioOlympicsInOCUITests" */ = {
 			isa = XCConfigurationList;
@@ -603,6 +625,7 @@
 				C2FC215E1DD8B5C300EB204B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
