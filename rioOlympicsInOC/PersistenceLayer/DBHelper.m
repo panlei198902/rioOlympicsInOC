@@ -18,7 +18,8 @@
 //获取沙箱目录方法
 -(NSString*) applicationDirectoryPath: (NSString*)fileName {
     NSString *appDirectorPath = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, true);
-    return @"ss";
+    NSString *a = @"ss";
+    return a;
 }
 
 //获取属性列表文件内版本号方法
