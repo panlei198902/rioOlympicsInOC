@@ -15,6 +15,12 @@
 		C2FC213C1DD8B5C300EB204B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2FC213A1DD8B5C300EB204B /* LaunchScreen.storyboard */; };
 		C2FC21471DD8B5C300EB204B /* rioOlympicsInOCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FC21461DD8B5C300EB204B /* rioOlympicsInOCTests.m */; };
 		C2FC21521DD8B5C300EB204B /* rioOlympicsInOCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FC21511DD8B5C300EB204B /* rioOlympicsInOCUITests.m */; };
+		C2FC21631DD8B64600EB204B /* Events.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FC21621DD8B64600EB204B /* Events.m */; };
+		C2FC21691DD8B77500EB204B /* create_load.sql in Resources */ = {isa = PBXBuildFile; fileRef = C2FC21671DD8B77500EB204B /* create_load.sql */; };
+		C2FC216A1DD8B77500EB204B /* DBConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2FC21681DD8B77500EB204B /* DBConfig.plist */; };
+		C2FC216D1DD8B81400EB204B /* Schedule.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FC216C1DD8B81400EB204B /* Schedule.m */; };
+		C2FC21731DD8B96600EB204B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C2FC21721DD8B96600EB204B /* libsqlite3.tbd */; };
+		C2FC21761DD8B9F300EB204B /* DBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FC21751DD8B9F300EB204B /* DBHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,15 @@
 		C2FC214D1DD8B5C300EB204B /* rioOlympicsInOCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rioOlympicsInOCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2FC21511DD8B5C300EB204B /* rioOlympicsInOCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = rioOlympicsInOCUITests.m; sourceTree = "<group>"; };
 		C2FC21531DD8B5C300EB204B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2FC21611DD8B64600EB204B /* Events.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Events.h; sourceTree = "<group>"; };
+		C2FC21621DD8B64600EB204B /* Events.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Events.m; sourceTree = "<group>"; };
+		C2FC21671DD8B77500EB204B /* create_load.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = create_load.sql; sourceTree = "<group>"; };
+		C2FC21681DD8B77500EB204B /* DBConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DBConfig.plist; sourceTree = "<group>"; };
+		C2FC216B1DD8B81400EB204B /* Schedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Schedule.h; sourceTree = "<group>"; };
+		C2FC216C1DD8B81400EB204B /* Schedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Schedule.m; sourceTree = "<group>"; };
+		C2FC21721DD8B96600EB204B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		C2FC21741DD8B9F300EB204B /* DBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBHelper.h; sourceTree = "<group>"; };
+		C2FC21751DD8B9F300EB204B /* DBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2FC21731DD8B96600EB204B /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +101,7 @@
 				C2FC21451DD8B5C300EB204B /* rioOlympicsInOCTests */,
 				C2FC21501DD8B5C300EB204B /* rioOlympicsInOCUITests */,
 				C2FC212A1DD8B5C300EB204B /* Products */,
+				C2FC21711DD8B96600EB204B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +118,9 @@
 		C2FC212B1DD8B5C300EB204B /* rioOlympicsInOC */ = {
 			isa = PBXGroup;
 			children = (
+				C2FC21661DD8B77500EB204B /* DBFile */,
+				C2FC21651DD8B74C00EB204B /* BusinessLayer */,
+				C2FC21641DD8B73E00EB204B /* PersistenceLayer */,
 				C2FC212F1DD8B5C300EB204B /* AppDelegate.h */,
 				C2FC21301DD8B5C300EB204B /* AppDelegate.m */,
 				C2FC21321DD8B5C300EB204B /* ViewController.h */,
@@ -138,6 +158,52 @@
 				C2FC21531DD8B5C300EB204B /* Info.plist */,
 			);
 			path = rioOlympicsInOCUITests;
+			sourceTree = "<group>";
+		};
+		C2FC21601DD8B62D00EB204B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				C2FC21611DD8B64600EB204B /* Events.h */,
+				C2FC21621DD8B64600EB204B /* Events.m */,
+				C2FC216B1DD8B81400EB204B /* Schedule.h */,
+				C2FC216C1DD8B81400EB204B /* Schedule.m */,
+			);
+			name = Domain;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		C2FC21641DD8B73E00EB204B /* PersistenceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				C2FC21601DD8B62D00EB204B /* Domain */,
+				C2FC21741DD8B9F300EB204B /* DBHelper.h */,
+				C2FC21751DD8B9F300EB204B /* DBHelper.m */,
+			);
+			path = PersistenceLayer;
+			sourceTree = "<group>";
+		};
+		C2FC21651DD8B74C00EB204B /* BusinessLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BusinessLayer;
+			sourceTree = "<group>";
+		};
+		C2FC21661DD8B77500EB204B /* DBFile */ = {
+			isa = PBXGroup;
+			children = (
+				C2FC21671DD8B77500EB204B /* create_load.sql */,
+				C2FC21681DD8B77500EB204B /* DBConfig.plist */,
+			);
+			path = DBFile;
+			sourceTree = "<group>";
+		};
+		C2FC21711DD8B96600EB204B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2FC21721DD8B96600EB204B /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +315,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2FC216A1DD8B77500EB204B /* DBConfig.plist in Resources */,
+				C2FC21691DD8B77500EB204B /* create_load.sql in Resources */,
 				C2FC213C1DD8B5C300EB204B /* LaunchScreen.storyboard in Resources */,
 				C2FC21391DD8B5C300EB204B /* Assets.xcassets in Resources */,
 				C2FC21371DD8B5C300EB204B /* Main.storyboard in Resources */,
@@ -276,9 +344,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2FC216D1DD8B81400EB204B /* Schedule.m in Sources */,
+				C2FC21631DD8B64600EB204B /* Events.m in Sources */,
 				C2FC21341DD8B5C300EB204B /* ViewController.m in Sources */,
 				C2FC21311DD8B5C300EB204B /* AppDelegate.m in Sources */,
 				C2FC212E1DD8B5C300EB204B /* main.m in Sources */,
+				C2FC21761DD8B9F300EB204B /* DBHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
