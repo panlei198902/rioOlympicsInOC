@@ -10,25 +10,75 @@
 
 @implementation EventDAO
 
-+ (NSMutableArray*) findAll {
+- (NSMutableArray*) findAll {
     NSMutableArray *listData = [[NSMutableArray alloc] init];
     if ([self openDB]) {
         NSString *sql = @"SELECT EventID, EventName, EventIcon, KeyInfo, BasicsInfo, OlympicInfo FROM Events";
         
         //预处理
         sqlite3_stmt *statement;
-        if (sqlite3_prepare_v2(, [sql UTF8String], -1, &statement, NULL) == SQLITE_ROW) {
-            
+        if (sqlite3_prepare_v2(self.db, [sql UTF8String], -1, &statement, NULL) == SQLITE_OK) {
+            while (sqlite3_step(statement) == SQLITE_ROW) {
+                
+                Events *event = [[Events alloc] init];
+                //绑定查询到的数据
+                event.EventID = sqlite3_column_int(statement, 0);
+                
+                char *eventName = (char*)sqlite3_column_text(statement, 1);
+                event.EventName = [[NSString alloc] initWithUTF8String:eventName];
+                
+                char *eventIcon = (char*)sqlite3_column_text(statement, 2);
+                event.EventIcon = [[NSString alloc] initWithUTF8String:eventIcon];
+                
+                char *keyInfo = (char*)sqlite3_column_text(statement, 3);
+                event.KeyInfo = [[NSString alloc] initWithUTF8String:keyInfo];
+                
+                char *basicsInfo = (char*)sqlite3_column_text(statement, 4);
+                event.BasicsInfo = [[NSString alloc] initWithUTF8String:basicsInfo];
+                
+                char *olympicInfo = (char*)sqlite3_column_text(statement, 5);
+                event.OlympicInfo = [[NSString alloc] initWithUTF8String:olympicInfo];
+                
+                [listData addObject:event];
+            }
         }
+        sqlite3_finalize(statement);
+        sqlite3_close(self.db);
     }
+    return listData;
 }
-/*
- EventID            INTEGER   primary key autoincrement     not null,
- EventName          VARCHAR(20),
- EventIcon          VARCHAR(20),
- KeyInfo            CLOB,
- BasicsInfo         CLOB,
- OlympicInfo        CLOB
- */
+
+- (Events*)findByKey: (Events*)model {
+    Events *event = [[Events alloc] init];
+    
+    //打开数据库
+    if ([self openDB]) {
+        NSString *qsql = @"SELECT EventName, EventIcon, KeyInfo, BasicsInfo, OlympicInfo FROM Events WHERE EventID = ?";
+        //预处理
+        sqlite3_stmt *statement;
+        if (sqlite3_prepare_v2(self.db, [qsql UTF8String], -1, NULL, NULL) == SQLITE_OK) {
+            sqlite3_bind_int(statement, -1, model.EventID);
+            if (sqlite3_step(statement) == SQLITE_ROW) {
+                char *eventName = (char*)sqlite3_column_text(statement, 0);
+                event.EventName = [[NSString alloc] initWithUTF8String:eventName];
+                
+                char *eventIcon = (char*)sqlite3_column_text(statement, 1);
+                event.EventIcon = [[NSString alloc] initWithUTF8String:eventIcon];
+                
+                char *keyInfo = (char*)sqlite3_column_text(statement, 2);
+                event.KeyInfo = [[NSString alloc] initWithUTF8String:keyInfo];
+                
+                char *basicsInfo = (char*)sqlite3_column_text(statement, 3);
+                event.BasicsInfo = [[NSString alloc] initWithUTF8String:basicsInfo];
+                
+                char *olympicInfo = (char*)sqlite3_column_text(statement, 4);
+                event.OlympicInfo = [[NSString alloc] initWithUTF8String:olympicInfo];
+            }
+        }
+        sqlite3_finalize(statement);
+        sqlite3_close(self.db);
+    }
+    return event;
+}
 
 @end

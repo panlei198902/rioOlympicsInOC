@@ -12,6 +12,6 @@
 
 @interface BaseDAO : NSObject
 
-+ (BOOL)openDB;
+- (BOOL)openDB;
 @property sqlite3 *db;
 @end

@@ -11,7 +11,7 @@
 
 @implementation BaseDAO
 
-+ (BOOL)openDB {
+- (BOOL)openDB {
     const char *dbPath = [DBHelper applicationDirectoryPath:DB_FILENAME];
     if (sqlite3_open(dbPath, &db) != SQLITE_OK) {
         NSLog(@"数据库失败");

@@ -10,11 +10,5 @@
 
 @implementation Events
 
-int EventID;
-NSString *EventName;
-NSString *EventIcon;
-NSString *KeyInfo;
-NSString *BasicsInfo;
-NSString *OlympicInfo;
 
 @end

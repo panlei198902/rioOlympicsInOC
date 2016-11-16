@@ -7,9 +7,10 @@
 //
 
 #import "BaseDAO.h"
+#import "Events.h"
 
 @interface EventDAO : BaseDAO
 
-+ (NSMutableArray*) findAll;
-
+- (NSMutableArray*) findAll;
+- (Events*)findByKey: (Events*)model;
 @end
