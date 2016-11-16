@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C2B75A0B1DD9CA8300151B0A /* BaseDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B75A0A1DD9CA8300151B0A /* BaseDAO.m */; };
 		C2B75A0E1DD9CE0A00151B0A /* EventDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B75A0D1DD9CE0A00151B0A /* EventDAO.m */; };
+		C2B75A111DDC56E200151B0A /* ScheduleDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B75A101DDC56E200151B0A /* ScheduleDAO.m */; };
 		C2FC212E1DD8B5C300EB204B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FC212D1DD8B5C300EB204B /* main.m */; };
 		C2FC21311DD8B5C300EB204B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FC21301DD8B5C300EB204B /* AppDelegate.m */; };
 		C2FC21341DD8B5C300EB204B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FC21331DD8B5C300EB204B /* ViewController.m */; };
@@ -47,6 +48,8 @@
 		C2B75A0A1DD9CA8300151B0A /* BaseDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDAO.m; sourceTree = "<group>"; };
 		C2B75A0C1DD9CE0A00151B0A /* EventDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDAO.h; sourceTree = "<group>"; };
 		C2B75A0D1DD9CE0A00151B0A /* EventDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDAO.m; sourceTree = "<group>"; };
+		C2B75A0F1DDC56E200151B0A /* ScheduleDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleDAO.h; sourceTree = "<group>"; };
+		C2B75A101DDC56E200151B0A /* ScheduleDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleDAO.m; sourceTree = "<group>"; };
 		C2FC21291DD8B5C300EB204B /* rioOlympicsInOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rioOlympicsInOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2FC212D1DD8B5C300EB204B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C2FC212F1DD8B5C300EB204B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -109,6 +112,8 @@
 				C2B75A0A1DD9CA8300151B0A /* BaseDAO.m */,
 				C2B75A0C1DD9CE0A00151B0A /* EventDAO.h */,
 				C2B75A0D1DD9CE0A00151B0A /* EventDAO.m */,
+				C2B75A0F1DDC56E200151B0A /* ScheduleDAO.h */,
+				C2B75A101DDC56E200151B0A /* ScheduleDAO.m */,
 			);
 			name = DAO;
 			sourceTree = "<group>";
@@ -369,6 +374,7 @@
 				C2B75A0B1DD9CA8300151B0A /* BaseDAO.m in Sources */,
 				C2FC21311DD8B5C300EB204B /* AppDelegate.m in Sources */,
 				C2FC212E1DD8B5C300EB204B /* main.m in Sources */,
+				C2B75A111DDC56E200151B0A /* ScheduleDAO.m in Sources */,
 				C2FC21761DD8B9F300EB204B /* DBHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Events.h"
 
 @interface Schedule : NSObject
-
+@property int ScheduleID;
+@property NSString *GameDate;
+@property NSString *GameTime;
+@property NSString *GameInfo;
+@property Events *event;
 @end

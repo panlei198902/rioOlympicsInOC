@@ -7,14 +7,10 @@
 //
 
 #import "Schedule.h"
-#import "Events.h"
+
 
 @implementation Schedule
 
-int ScheduleID;
-NSString *GameDate;
-NSString *GameTime;
-NSString *GameInfo;
-Events *event;
+
 
 @end
