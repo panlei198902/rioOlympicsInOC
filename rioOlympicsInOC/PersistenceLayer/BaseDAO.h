@@ -10,8 +10,12 @@
 #import "sqlite3.h"
 
 
-@interface BaseDAO : NSObject
+@interface BaseDAO : NSObject {
+    sqlite3 *db;
+}
+
+
 
 - (BOOL)openDB;
-@property sqlite3 *db;
+
 @end

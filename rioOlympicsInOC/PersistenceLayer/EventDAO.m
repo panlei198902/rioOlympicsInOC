@@ -9,6 +9,15 @@
 #import "EventDAO.h"
 
 @implementation EventDAO
+static EventDAO *sharedSingleton = nil;
++ (instancetype)sharedInstance {
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedSingleton = [[self alloc] init];
+    });
+    return sharedSingleton;
+}
 
 - (NSMutableArray*) findAll {
     NSMutableArray *listData = [[NSMutableArray alloc] init];
@@ -17,7 +26,7 @@
         
         //预处理
         sqlite3_stmt *statement;
-        if (sqlite3_prepare_v2(self.db, [sql UTF8String], -1, &statement, NULL) == SQLITE_OK) {
+        if (sqlite3_prepare_v2(db, [sql UTF8String], -1, &statement, NULL) == SQLITE_OK) {
             while (sqlite3_step(statement) == SQLITE_ROW) {
                 
                 Events *event = [[Events alloc] init];
@@ -43,7 +52,7 @@
             }
         }
         sqlite3_finalize(statement);
-        sqlite3_close(self.db);
+        sqlite3_close(db);
     }
     return listData;
 }
@@ -56,7 +65,7 @@
         NSString *qsql = @"SELECT EventName, EventIcon, KeyInfo, BasicsInfo, OlympicInfo FROM Events WHERE EventID = ?";
         //预处理
         sqlite3_stmt *statement;
-        if (sqlite3_prepare_v2(self.db, [qsql UTF8String], -1, NULL, NULL) == SQLITE_OK) {
+        if (sqlite3_prepare_v2(db, [qsql UTF8String], -1, NULL, NULL) == SQLITE_OK) {
             sqlite3_bind_int(statement, -1, model.EventID);
             if (sqlite3_step(statement) == SQLITE_ROW) {
                 char *eventName = (char*)sqlite3_column_text(statement, 0);
@@ -76,7 +85,7 @@
             }
         }
         sqlite3_finalize(statement);
-        sqlite3_close(self.db);
+        sqlite3_close(db);
     }
     return event;
 }

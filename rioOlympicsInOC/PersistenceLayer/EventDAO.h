@@ -10,7 +10,7 @@
 #import "Events.h"
 
 @interface EventDAO : BaseDAO
-
++ (instancetype)sharedInstance;
 - (NSMutableArray*) findAll;
 - (Events*)findByKey: (Events*)model;
 @end

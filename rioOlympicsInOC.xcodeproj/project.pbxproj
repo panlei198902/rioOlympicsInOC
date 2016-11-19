@@ -10,6 +10,23 @@
 		C2B75A0B1DD9CA8300151B0A /* BaseDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B75A0A1DD9CA8300151B0A /* BaseDAO.m */; };
 		C2B75A0E1DD9CE0A00151B0A /* EventDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B75A0D1DD9CE0A00151B0A /* EventDAO.m */; };
 		C2B75A111DDC56E200151B0A /* ScheduleDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B75A101DDC56E200151B0A /* ScheduleDAO.m */; };
+		C2B75A221DDD80FB00151B0A /* About.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B75A131DDD80FB00151B0A /* About.png */; };
+		C2B75A231DDD80FB00151B0A /* About@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B75A141DDD80FB00151B0A /* About@2x.png */; };
+		C2B75A241DDD80FB00151B0A /* About@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B75A151DDD80FB00151B0A /* About@3x.png */; };
+		C2B75A251DDD80FB00151B0A /* CountDown.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B75A161DDD80FB00151B0A /* CountDown.png */; };
+		C2B75A261DDD80FB00151B0A /* CountDown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B75A171DDD80FB00151B0A /* CountDown@2x.png */; };
+		C2B75A271DDD80FB00151B0A /* CountDown@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B75A181DDD80FB00151B0A /* CountDown@3x.png */; };
+		C2B75A281DDD80FB00151B0A /* Events.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B75A191DDD80FB00151B0A /* Events.png */; };
+		C2B75A291DDD80FB00151B0A /* Events@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B75A1A1DDD80FB00151B0A /* Events@2x.png */; };
+		C2B75A2A1DDD80FB00151B0A /* Events@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B75A1B1DDD80FB00151B0A /* Events@3x.png */; };
+		C2B75A2B1DDD80FB00151B0A /* Home.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B75A1C1DDD80FB00151B0A /* Home.png */; };
+		C2B75A2C1DDD80FB00151B0A /* Home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B75A1D1DDD80FB00151B0A /* Home@2x.png */; };
+		C2B75A2D1DDD80FB00151B0A /* Home@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B75A1E1DDD80FB00151B0A /* Home@3x.png */; };
+		C2B75A2E1DDD80FB00151B0A /* Schedule.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B75A1F1DDD80FB00151B0A /* Schedule.png */; };
+		C2B75A2F1DDD80FB00151B0A /* Schedule@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B75A201DDD80FB00151B0A /* Schedule@2x.png */; };
+		C2B75A301DDD80FB00151B0A /* Schedule@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B75A211DDD80FB00151B0A /* Schedule@3x.png */; };
+		C2B75A4C1DDDA13700151B0A /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B75A4B1DDDA13700151B0A /* EventsViewController.m */; };
+		C2B75A511DDDA1B100151B0A /* EventBL.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B75A501DDDA1B100151B0A /* EventBL.m */; };
 		C2FC212E1DD8B5C300EB204B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FC212D1DD8B5C300EB204B /* main.m */; };
 		C2FC21311DD8B5C300EB204B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FC21301DD8B5C300EB204B /* AppDelegate.m */; };
 		C2FC21341DD8B5C300EB204B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FC21331DD8B5C300EB204B /* ViewController.m */; };
@@ -50,6 +67,25 @@
 		C2B75A0D1DD9CE0A00151B0A /* EventDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDAO.m; sourceTree = "<group>"; };
 		C2B75A0F1DDC56E200151B0A /* ScheduleDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleDAO.h; sourceTree = "<group>"; };
 		C2B75A101DDC56E200151B0A /* ScheduleDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleDAO.m; sourceTree = "<group>"; };
+		C2B75A131DDD80FB00151B0A /* About.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = About.png; sourceTree = "<group>"; };
+		C2B75A141DDD80FB00151B0A /* About@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "About@2x.png"; sourceTree = "<group>"; };
+		C2B75A151DDD80FB00151B0A /* About@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "About@3x.png"; sourceTree = "<group>"; };
+		C2B75A161DDD80FB00151B0A /* CountDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CountDown.png; sourceTree = "<group>"; };
+		C2B75A171DDD80FB00151B0A /* CountDown@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CountDown@2x.png"; sourceTree = "<group>"; };
+		C2B75A181DDD80FB00151B0A /* CountDown@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CountDown@3x.png"; sourceTree = "<group>"; };
+		C2B75A191DDD80FB00151B0A /* Events.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Events.png; sourceTree = "<group>"; };
+		C2B75A1A1DDD80FB00151B0A /* Events@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Events@2x.png"; sourceTree = "<group>"; };
+		C2B75A1B1DDD80FB00151B0A /* Events@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Events@3x.png"; sourceTree = "<group>"; };
+		C2B75A1C1DDD80FB00151B0A /* Home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Home.png; sourceTree = "<group>"; };
+		C2B75A1D1DDD80FB00151B0A /* Home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Home@2x.png"; sourceTree = "<group>"; };
+		C2B75A1E1DDD80FB00151B0A /* Home@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Home@3x.png"; sourceTree = "<group>"; };
+		C2B75A1F1DDD80FB00151B0A /* Schedule.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Schedule.png; sourceTree = "<group>"; };
+		C2B75A201DDD80FB00151B0A /* Schedule@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Schedule@2x.png"; sourceTree = "<group>"; };
+		C2B75A211DDD80FB00151B0A /* Schedule@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Schedule@3x.png"; sourceTree = "<group>"; };
+		C2B75A4A1DDDA13700151B0A /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
+		C2B75A4B1DDDA13700151B0A /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
+		C2B75A4F1DDDA1B100151B0A /* EventBL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventBL.h; path = rioOlympicsInOC/EventBL.h; sourceTree = SOURCE_ROOT; };
+		C2B75A501DDDA1B100151B0A /* EventBL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventBL.m; path = rioOlympicsInOC/EventBL.m; sourceTree = SOURCE_ROOT; };
 		C2FC21291DD8B5C300EB204B /* rioOlympicsInOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rioOlympicsInOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2FC212D1DD8B5C300EB204B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C2FC212F1DD8B5C300EB204B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -118,6 +154,28 @@
 			name = DAO;
 			sourceTree = "<group>";
 		};
+		C2B75A121DDD80FB00151B0A /* tabbar_icon */ = {
+			isa = PBXGroup;
+			children = (
+				C2B75A131DDD80FB00151B0A /* About.png */,
+				C2B75A141DDD80FB00151B0A /* About@2x.png */,
+				C2B75A151DDD80FB00151B0A /* About@3x.png */,
+				C2B75A161DDD80FB00151B0A /* CountDown.png */,
+				C2B75A171DDD80FB00151B0A /* CountDown@2x.png */,
+				C2B75A181DDD80FB00151B0A /* CountDown@3x.png */,
+				C2B75A191DDD80FB00151B0A /* Events.png */,
+				C2B75A1A1DDD80FB00151B0A /* Events@2x.png */,
+				C2B75A1B1DDD80FB00151B0A /* Events@3x.png */,
+				C2B75A1C1DDD80FB00151B0A /* Home.png */,
+				C2B75A1D1DDD80FB00151B0A /* Home@2x.png */,
+				C2B75A1E1DDD80FB00151B0A /* Home@3x.png */,
+				C2B75A1F1DDD80FB00151B0A /* Schedule.png */,
+				C2B75A201DDD80FB00151B0A /* Schedule@2x.png */,
+				C2B75A211DDD80FB00151B0A /* Schedule@3x.png */,
+			);
+			path = tabbar_icon;
+			sourceTree = "<group>";
+		};
 		C2FC21201DD8B5C200EB204B = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +200,9 @@
 		C2FC212B1DD8B5C300EB204B /* rioOlympicsInOC */ = {
 			isa = PBXGroup;
 			children = (
+				C2B75A4A1DDDA13700151B0A /* EventsViewController.h */,
+				C2B75A4B1DDDA13700151B0A /* EventsViewController.m */,
+				C2B75A121DDD80FB00151B0A /* tabbar_icon */,
 				C2FC21661DD8B77500EB204B /* DBFile */,
 				C2FC21651DD8B74C00EB204B /* BusinessLayer */,
 				C2FC21641DD8B73E00EB204B /* PersistenceLayer */,
@@ -208,6 +269,8 @@
 		C2FC21651DD8B74C00EB204B /* BusinessLayer */ = {
 			isa = PBXGroup;
 			children = (
+				C2B75A4F1DDDA1B100151B0A /* EventBL.h */,
+				C2B75A501DDDA1B100151B0A /* EventBL.m */,
 			);
 			path = BusinessLayer;
 			sourceTree = "<group>";
@@ -338,10 +401,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2B75A261DDD80FB00151B0A /* CountDown@2x.png in Resources */,
+				C2B75A2C1DDD80FB00151B0A /* Home@2x.png in Resources */,
+				C2B75A301DDD80FB00151B0A /* Schedule@3x.png in Resources */,
+				C2B75A291DDD80FB00151B0A /* Events@2x.png in Resources */,
 				C2FC216A1DD8B77500EB204B /* DBConfig.plist in Resources */,
 				C2FC21691DD8B77500EB204B /* create_load.sql in Resources */,
+				C2B75A271DDD80FB00151B0A /* CountDown@3x.png in Resources */,
+				C2B75A2E1DDD80FB00151B0A /* Schedule.png in Resources */,
 				C2FC213C1DD8B5C300EB204B /* LaunchScreen.storyboard in Resources */,
+				C2B75A2D1DDD80FB00151B0A /* Home@3x.png in Resources */,
+				C2B75A231DDD80FB00151B0A /* About@2x.png in Resources */,
+				C2B75A281DDD80FB00151B0A /* Events.png in Resources */,
+				C2B75A221DDD80FB00151B0A /* About.png in Resources */,
+				C2B75A2F1DDD80FB00151B0A /* Schedule@2x.png in Resources */,
+				C2B75A241DDD80FB00151B0A /* About@3x.png in Resources */,
 				C2FC21391DD8B5C300EB204B /* Assets.xcassets in Resources */,
+				C2B75A251DDD80FB00151B0A /* CountDown.png in Resources */,
+				C2B75A2B1DDD80FB00151B0A /* Home.png in Resources */,
+				C2B75A2A1DDD80FB00151B0A /* Events@3x.png in Resources */,
 				C2FC21371DD8B5C300EB204B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,8 +446,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2FC216D1DD8B81400EB204B /* Schedule.m in Sources */,
+				C2B75A4C1DDDA13700151B0A /* EventsViewController.m in Sources */,
 				C2FC21631DD8B64600EB204B /* Events.m in Sources */,
 				C2FC21341DD8B5C300EB204B /* ViewController.m in Sources */,
+				C2B75A511DDDA1B100151B0A /* EventBL.m in Sources */,
 				C2B75A0E1DD9CE0A00151B0A /* EventDAO.m in Sources */,
 				C2B75A0B1DD9CA8300151B0A /* BaseDAO.m in Sources */,
 				C2FC21311DD8B5C300EB204B /* AppDelegate.m in Sources */,

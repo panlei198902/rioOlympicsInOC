@@ -11,8 +11,11 @@
 
 @implementation BaseDAO
 
+
+
 - (BOOL)openDB {
     const char *dbPath = [DBHelper applicationDirectoryPath:DB_FILENAME];
+    NSLog(@"dbPath: %s",dbPath);
     if (sqlite3_open(dbPath, &db) != SQLITE_OK) {
         NSLog(@"数据库失败");
         sqlite3_close(db);
@@ -21,5 +24,12 @@
     return true;
 }
 
+- (id) init {
+    self = [super init];
+    if (self) {
+        [DBHelper initDB];
+    }
+    return self;
+}
 
 @end

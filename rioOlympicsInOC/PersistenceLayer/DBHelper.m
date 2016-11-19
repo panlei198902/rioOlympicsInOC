@@ -14,7 +14,7 @@
 
 //获取沙箱目录方法
 +(const char *) applicationDirectoryPath: (NSString*)fileName {
-    NSString *documentDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, true) lastObject];
+    NSString *documentDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, true) lastObject];
     NSString *filePath = [documentDirectory stringByAppendingPathComponent:fileName];
     
     const char *cPath = [filePath UTF8String];
@@ -22,7 +22,7 @@
 }
 //初始化数据库
 +(void) initDB {
-    //比较属性列表版本号和数据库版本号，不一致则升级数据库
+    //比较属性列表版本号和数据库版本号，不一Z致则升级数据库
     NSString * plistPath = [[NSBundle mainBundle] pathForResource:@"DBConfig" ofType:@"plist"];
     NSDictionary *plistDic = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
     //从属性列表文件中取出版本号
@@ -34,6 +34,7 @@
     int versionNumber = [DBHelper dbVersion_number];
     if (versionNumber != configVersion.intValue) {
         const char *dbFilePath = [self applicationDirectoryPath:DB_FILENAME];
+        NSLog(@"dbFilePath: %s",dbFilePath);
         if (sqlite3_open(dbFilePath, &db) == SQLITE_OK) {
             NSLog(@"数据库升级中");
             //取到create_load.sql的path

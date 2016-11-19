@@ -15,7 +15,7 @@
     if ([self openDB]) {
         sqlite3_stmt *statement;
         NSString *qsql = @"SELECT ScheduleID, GameDate, GameTime, GameInfo, EventID FROM Schedule";
-        if (sqlite3_prepare_v2(self.db, [qsql UTF8String], -1, &statement, NULL) == SQLITE_OK) {
+        if (sqlite3_prepare_v2(db, [qsql UTF8String], -1, &statement, NULL) == SQLITE_OK) {
             while (sqlite3_step(statement) == SQLITE_ROW) {
                 Schedule *schedule = [[Schedule alloc] init];
                 Events *event = [[Events alloc] init];
@@ -38,7 +38,7 @@
             }
         }
         sqlite3_finalize(statement);
-        sqlite3_close(self.db);
+        sqlite3_close(db);
     }
     return listData;
 }
@@ -49,7 +49,7 @@
     if ([self openDB]) {
         sqlite3_stmt *statement;
         NSString *qsql = @"ScheduleID, GameDate, GameTime, GameInfo, EventID FROM Schedule WHERE ScheduleID = ?";
-        if (sqlite3_prepare_v2(self.db, [qsql UTF8String], -1, &statement, NULL) == SQLITE_OK) {
+        if (sqlite3_prepare_v2(db, [qsql UTF8String], -1, &statement, NULL) == SQLITE_OK) {
             sqlite3_bind_int(statement, 0, model.ScheduleID);
             
             if (sqlite3_step(statement) == SQLITE_OK) {
@@ -70,7 +70,7 @@
             }
         }
         sqlite3_finalize(statement);
-        sqlite3_close(self.db);
+        sqlite3_close(db);
     }
     return schedule;
 }
