@@ -10,7 +10,16 @@
 
 @implementation ScheduleDAO
 
-- (NSMutableArray*)findAlll {
+static ScheduleDAO* singeleton;
++ (instancetype)sharedInstance {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        singeleton = [[self alloc] init];
+    });
+    return singeleton;
+}
+
+- (NSMutableArray*)findAll {
     NSMutableArray *listData = [[NSMutableArray alloc] init];
     if ([self openDB]) {
         sqlite3_stmt *statement;
@@ -19,7 +28,7 @@
             while (sqlite3_step(statement) == SQLITE_ROW) {
                 Schedule *schedule = [[Schedule alloc] init];
                 Events *event = [[Events alloc] init];
-                event = schedule.event;
+                schedule.event = event;
                 
                 schedule.ScheduleID = sqlite3_column_int(statement, 0);
                 
@@ -34,7 +43,7 @@
                 
                 schedule.event.EventID = sqlite3_column_int(statement, 4);
                 
-                [listData addObject:event];
+                [listData addObject:schedule];
             }
         }
         sqlite3_finalize(statement);
@@ -45,7 +54,7 @@
 - (Schedule*)findByKey: (Schedule*)model {
     Schedule *schedule = [[Schedule alloc] init];
     Events *event = [[Events alloc] init];
-    event = schedule.event;
+    schedule.event = event ;
     if ([self openDB]) {
         sqlite3_stmt *statement;
         NSString *qsql = @"ScheduleID, GameDate, GameTime, GameInfo, EventID FROM Schedule WHERE ScheduleID = ?";

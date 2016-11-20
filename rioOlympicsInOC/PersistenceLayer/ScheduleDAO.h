@@ -11,7 +11,8 @@
 #import "Events.h"
 @interface ScheduleDAO : BaseDAO
 
-- (NSMutableArray*)findAlll;
++ (instancetype)sharedInstance;
+- (NSMutableArray*)findAll;
 - (Schedule*)findByKey: (Schedule*)model;
 
 @end

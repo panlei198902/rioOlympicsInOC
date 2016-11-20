@@ -83,9 +83,10 @@ static EventDAO *sharedSingleton = nil;
                 char *olympicInfo = (char*)sqlite3_column_text(statement, 4);
                 event.OlympicInfo = [[NSString alloc] initWithUTF8String:olympicInfo];
             }
+            sqlite3_finalize(statement);
+            sqlite3_close(db);
         }
-        sqlite3_finalize(statement);
-        sqlite3_close(db);
+
     }
     return event;
 }

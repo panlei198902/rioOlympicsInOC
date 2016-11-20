@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C26E90521DE1E0320083ECA6 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C26E90511DE1E0320083ECA6 /* ScheduleViewController.m */; };
+		C26E90551DE1E0610083ECA6 /* ScheduleBL.m in Sources */ = {isa = PBXBuildFile; fileRef = C26E90541DE1E0610083ECA6 /* ScheduleBL.m */; };
 		C2B75A0B1DD9CA8300151B0A /* BaseDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B75A0A1DD9CA8300151B0A /* BaseDAO.m */; };
 		C2B75A0E1DD9CE0A00151B0A /* EventDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B75A0D1DD9CE0A00151B0A /* EventDAO.m */; };
 		C2B75A111DDC56E200151B0A /* ScheduleDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B75A101DDC56E200151B0A /* ScheduleDAO.m */; };
@@ -105,6 +107,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C26E90501DE1E0320083ECA6 /* ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
+		C26E90511DE1E0320083ECA6 /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
+		C26E90531DE1E0610083ECA6 /* ScheduleBL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScheduleBL.h; path = rioOlympicsInOC/ScheduleBL.h; sourceTree = SOURCE_ROOT; };
+		C26E90541DE1E0610083ECA6 /* ScheduleBL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScheduleBL.m; path = rioOlympicsInOC/ScheduleBL.m; sourceTree = SOURCE_ROOT; };
 		C2B75A091DD9CA8300151B0A /* BaseDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDAO.h; sourceTree = "<group>"; };
 		C2B75A0A1DD9CA8300151B0A /* BaseDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDAO.m; sourceTree = "<group>"; };
 		C2B75A0C1DD9CE0A00151B0A /* EventDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDAO.h; sourceTree = "<group>"; };
@@ -346,6 +352,8 @@
 				C2D1B8B91DE0AFB0008C9C9A /* EventsViewCell.m */,
 				C2EEFBCF1DE1844A00D4693D /* EventsDetailViewController.h */,
 				C2EEFBD01DE1844A00D4693D /* EventsDetailViewController.m */,
+				C26E90501DE1E0320083ECA6 /* ScheduleViewController.h */,
+				C26E90511DE1E0320083ECA6 /* ScheduleViewController.m */,
 				C2B75A121DDD80FB00151B0A /* tabbar_icon */,
 				C2FC21661DD8B77500EB204B /* DBFile */,
 				C2FC21651DD8B74C00EB204B /* BusinessLayer */,
@@ -415,6 +423,8 @@
 			children = (
 				C2B75A4F1DDDA1B100151B0A /* EventBL.h */,
 				C2B75A501DDDA1B100151B0A /* EventBL.m */,
+				C26E90531DE1E0610083ECA6 /* ScheduleBL.h */,
+				C26E90541DE1E0610083ECA6 /* ScheduleBL.m */,
 			);
 			path = BusinessLayer;
 			sourceTree = "<group>";
@@ -637,6 +647,7 @@
 				C2B75A4C1DDDA13700151B0A /* EventsViewController.m in Sources */,
 				C2FC21631DD8B64600EB204B /* Events.m in Sources */,
 				C2FC21341DD8B5C300EB204B /* ViewController.m in Sources */,
+				C26E90521DE1E0320083ECA6 /* ScheduleViewController.m in Sources */,
 				C2B75A511DDDA1B100151B0A /* EventBL.m in Sources */,
 				C2B75A0E1DD9CE0A00151B0A /* EventDAO.m in Sources */,
 				C2B75A0B1DD9CA8300151B0A /* BaseDAO.m in Sources */,
@@ -644,6 +655,7 @@
 				C2FC212E1DD8B5C300EB204B /* main.m in Sources */,
 				C2B75A111DDC56E200151B0A /* ScheduleDAO.m in Sources */,
 				C2FC21761DD8B9F300EB204B /* DBHelper.m in Sources */,
+				C26E90551DE1E0610083ECA6 /* ScheduleBL.m in Sources */,
 				C2D1B8BA1DE0AFB0008C9C9A /* EventsViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
