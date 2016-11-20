@@ -7,25 +7,32 @@
 //
 
 #import "EventsViewController.h"
+#import "Events.h"
+#import "EventBL.h"
+#import "EventsViewCell.h"
+#import "EventsDetailViewController.h"
 
 @interface EventsViewController ()
-
+@property int columns;
 @end
 
 @implementation EventsViewController
 
 static NSString * const reuseIdentifier = @"Cell";
+NSMutableArray *events;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    
-    // Do any additional setup after loading the view.
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        self.columns = 2;
+    } else {
+        self.columns = 5;
+    }
+    if (events.count == 0 || events == nil) {
+        EventBL *bl = [[EventBL alloc] init];
+        events = [bl readData];
+        [self.collectionView reloadData];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,22 +53,30 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return events.count / self.columns;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of items
-    return 0;
+    return self.columns;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell
-    
+    EventsViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    long index = indexPath.section * self.columns + indexPath.row;
+        Events *event = [events objectAtIndex:index];
+        cell.imageView.image = [UIImage imageNamed:event.EventIcon];
     return cell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier  isEqual: @"ShowDetail"]) {
+        NSArray *indexPaths = self.collectionView.indexPathsForSelectedItems;
+        NSIndexPath *index = [indexPaths objectAtIndex:0];
+        Events *event = [events objectAtIndex: (index.section * self.columns + index.row)];
+        EventsDetailViewController *detailVC = segue.destinationViewController;
+        detailVC.event = event;
+    }
 }
 
 #pragma mark <UICollectionViewDelegate>

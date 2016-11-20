@@ -14,7 +14,7 @@
 - (NSMutableArray*)readData {
     NSMutableArray *listData = [[NSMutableArray alloc] init];
     EventDAO *dao = [EventDAO sharedInstance];
-    [dao findAll];
+    listData = [dao findAll];
     return listData;
 }
 @end
