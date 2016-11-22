@@ -62,11 +62,13 @@ static EventDAO *sharedSingleton = nil;
     
     //打开数据库
     if ([self openDB]) {
-        NSString *qsql = @"SELECT EventName, EventIcon, KeyInfo, BasicsInfo, OlympicInfo FROM Events WHERE EventID = ?";
+        NSString *qsql = @"SELECT EventName, EventIcon, KeyInfo, BasicsInfo, OlympicInfo, EventID FROM Events WHERE EventID = ?";
         //预处理
         sqlite3_stmt *statement;
-        if (sqlite3_prepare_v2(db, [qsql UTF8String], -1, NULL, NULL) == SQLITE_OK) {
-            sqlite3_bind_int(statement, -1, model.EventID);
+        if (sqlite3_prepare_v2(db, [qsql UTF8String], -1, &statement, NULL) == SQLITE_OK) {
+//            NSString* eventID = [[NSString alloc] initWithFormat:@"%i",model.EventID];
+//            sqlite3_bind_text(statement, 1, [eventID UTF8String], -1, NULL);
+            sqlite3_bind_int(statement, 1, model.EventID);
             if (sqlite3_step(statement) == SQLITE_ROW) {
                 char *eventName = (char*)sqlite3_column_text(statement, 0);
                 event.EventName = [[NSString alloc] initWithUTF8String:eventName];
@@ -82,13 +84,16 @@ static EventDAO *sharedSingleton = nil;
                 
                 char *olympicInfo = (char*)sqlite3_column_text(statement, 4);
                 event.OlympicInfo = [[NSString alloc] initWithUTF8String:olympicInfo];
+                
+                event.EventID = sqlite3_column_int(statement, 5);
             }
             sqlite3_finalize(statement);
             sqlite3_close(db);
+            return event;
         }
 
     }
-    return event;
+    return nil;
 }
 
 @end
