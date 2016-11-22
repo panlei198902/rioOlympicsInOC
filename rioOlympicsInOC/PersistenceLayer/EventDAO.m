@@ -66,8 +66,6 @@ static EventDAO *sharedSingleton = nil;
         //预处理
         sqlite3_stmt *statement;
         if (sqlite3_prepare_v2(db, [qsql UTF8String], -1, &statement, NULL) == SQLITE_OK) {
-//            NSString* eventID = [[NSString alloc] initWithFormat:@"%i",model.EventID];
-//            sqlite3_bind_text(statement, 1, [eventID UTF8String], -1, NULL);
             sqlite3_bind_int(statement, 1, model.EventID);
             if (sqlite3_step(statement) == SQLITE_ROW) {
                 char *eventName = (char*)sqlite3_column_text(statement, 0);
